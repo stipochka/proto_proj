@@ -1,4 +1,4 @@
-module proto_proj
+module github.com/stipochka/proto_proj
 
 go 1.23.4
 

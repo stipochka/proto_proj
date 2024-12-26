@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option go_package = "pkg/api";
+
+service Saver {
+    rpc Save(SaveRequest) returns (SaveStatus) {}
+    rpc Get(GetRequest) returns (GetResponse) {} 
+}
+
+message SaveRequest {
+    bytes image_data = 1;
+    string alias = 2;
+}
+
+message SaveStatus {
+    int32 saveStatusCode = 1;
+}
+
+message GetRequest {
+    string alias = 1;
+}
+
+message GetResponse {
+    bytes image_data = 1;
+    string alias = 2;
+}

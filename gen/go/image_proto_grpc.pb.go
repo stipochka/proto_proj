@@ -4,7 +4,7 @@
 // - protoc             v3.21.12
 // source: image_proto.proto
 
-package api
+package ssov1
 
 import (
 	context "context"
@@ -19,8 +19,8 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	Saver_Save_FullMethodName = "/Saver/Save"
-	Saver_Get_FullMethodName  = "/Saver/Get"
+	Saver_Save_FullMethodName = "/saver.Saver/Save"
+	Saver_Get_FullMethodName  = "/saver.Saver/Get"
 )
 
 // SaverClient is the client API for Saver service.
@@ -142,7 +142,7 @@ func _Saver_Get_Handler(srv interface{}, ctx context.Context, dec func(interface
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Saver_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "Saver",
+	ServiceName: "saver.Saver",
 	HandlerType: (*SaverServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

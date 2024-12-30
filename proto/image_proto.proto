@@ -1,6 +1,8 @@
 syntax = "proto3";
 
-option go_package = "pkg/api";
+package saver;
+
+option go_package = "stipochka.ssov;ssov1";
 
 service Saver {
     rpc Save(SaveRequest) returns (SaveStatus) {}
